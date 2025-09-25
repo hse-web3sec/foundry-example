@@ -63,7 +63,7 @@ contract MyTokenTest is Test {
     }
 
     // forge test --match-test test_Fork --fork-url https://ethereum.public.blockpi.network/v1/rpc/public
-    function test_Fork() public {
+    function test_Fork() public view {
         address USDT = 0xdAC17F958D2ee523a2206206994597C13D831ec7;
 
         bytes32 balance = vm.load(

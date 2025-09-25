@@ -11,9 +11,11 @@ contract CounterScript is Script {
     function setUp() public {}
 
     // forge script CounterScript --rpc-url https://ethereum.public.blockpi.network/v1/rpc/public
-    // forge script CounterScript --rpc-url 127.0.0.1:8545 --broadcast --sender 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+    // forge script CounterScript --rpc-url 127.0.0.1:8545 --broadcast
     function run() public {
-        vm.startBroadcast(0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80);
+        vm.startBroadcast(
+            0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+        );
 
         counter = new Counter();
 
